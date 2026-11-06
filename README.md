@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **GitHub Repository** | `https://github.com/PavanSiddu/Machine_Learning_Classification_Model` |
-| **Live Streamlit App** | `https://<your-app-name>.streamlit.app` |
+| **Live Streamlit App** | `https://machinelearningclassificationmodel-bypavan.streamlit.app` |
 
 ---
 
