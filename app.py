@@ -24,7 +24,7 @@ from model.metrics import classification_report, confusion_matrix, evaluate
 CLASS_NAMES = ("Not Spam", "Spam")
 METRIC_NAMES = ["Accuracy", "AUC", "Precision", "Recall", "F1", "MCC"]
 
-st.set_page_config(page_title="Spam Detector | Scratch ML Models", layout="wide")
+st.set_page_config(page_title="Spam Detector", layout="wide")
 
 
 @st.cache_resource
@@ -183,7 +183,7 @@ with tab_eval:
 with tab_compare:
     st.subheader("All models on the same test data")
     st.dataframe(
-        summary.style.format("{:.4f}").highlight_max(axis=0, color="#616145"),
+        summary.style.format("{:.4f}").highlight_max(axis=0, color="#A0A09A"),
         width="stretch",
     )
     best_model = summary["MCC"].idxmax()

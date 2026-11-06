@@ -1,7 +1,5 @@
 # Spam Email Detection with From-Scratch Classifiers
 
-**M.Tech (AIML) – Machine Learning – Assignment 2**
-
 | | |
 |---|---|
 | **GitHub Repository** | `https://github.com/PavanSiddu/Machine_Learning_Classification_Model` |
@@ -56,7 +54,7 @@ All models are trained on the same training split, evaluated on the same held-ou
 
 ## c. GitHub Repository Link
 
-`https://github.com/<your-username>/<your-repo-name>`
+`https://github.com/PavanSiddu/Machine_Learning_Classification_Model`
 
 Repository structure:
 
@@ -69,10 +67,10 @@ project-folder/
 │-- model/
     │-- __init__.py
     │-- config.py              # Paths, feature names, model file names
-    │-- classifiers.py         # 5 classifiers implemented from scratch (NumPy)
-    │-- metrics.py             # Accuracy, AUC, Precision, Recall, F1, MCC, confusion matrix, report
+    │-- classifiers.py         # 5 classifiers
+    │-- metrics.py             # Accuracy, AUC, Precision, Recall, F1, MCC, 
     │-- preprocessing.py       # Log + standard scaler, stratified split
-    │-- train_models.py        # Training script (downloads data, trains, saves artefacts)
+    │-- train_models.py        # Training script
     │-- spambase.csv           # Full raw dataset (downloaded from UCI)
     │-- scaler.pkl             # Fitted pre-processing artefact
     │-- logistic_regression.pkl
@@ -143,7 +141,7 @@ The app ([app.py](app.py)) loads the saved models from `model/` and **never retr
 
 ---
 
-## How to Run Locally (also used on BITS Virtual Lab)
+## How to Run Locally
 
 ```bash
 # 1. Create and activate a virtual environment
@@ -164,34 +162,3 @@ streamlit run app.py
 The app opens at `http://localhost:8501`.
 
 ---
-
-## Steps to Push to GitHub
-
-1. Create a new **public** repository on https://github.com (do not add a README/.gitignore there – they already exist here).
-2. From the project folder run:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: scratch classifiers on Spambase + Streamlit app"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-   git push -u origin main
-   ```
-3. `venv/` and `__pycache__/` are excluded by `.gitignore`. Confirm that `model/*.pkl`, `test_data.csv` and `requirements.txt` are visible in the repository.
-4. Commit in small, meaningful steps as you make changes – the commit history is reviewed.
-
-## Steps to Deploy on Streamlit Community Cloud
-
-1. Go to https://streamlit.io/cloud and **sign in with your GitHub account**.
-2. Click **Create app → Deploy a public app from GitHub** ("New app").
-3. Select your repository, branch **main**, and main file path **app.py**.
-4. (Optional) Under *Advanced settings* choose Python 3.12 or newer.
-5. Click **Deploy** and wait for the dependencies in `requirements.txt` to install.
-6. Copy the generated `https://<your-app-name>.streamlit.app` URL into this README and into the submission PDF.
-
-## Submission PDF Checklist
-
-1. GitHub repository link
-2. Live Streamlit app link
-3. One screenshot of the assignment executed on BITS Virtual Lab
-4. The contents of this README
